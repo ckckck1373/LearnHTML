@@ -1,11 +1,179 @@
 1. INTRODUCTION TO HTML(HyperText Markup Language)
     (a.)HTML provides structure to the content appearing on a website, such as images, text, or videos. Right-click on any page on the internet, 
         choose “Inspect,” and you’ll see HTML in a panel of your screen.
+
     (b.)A markup language is a computer language that defines the structure and presentation of raw text.
+
     (c.)Compose of several elements
     Ex:
         [---------element----------]
         (opening tag)  (closing tag)
         <p>Hello World!</p>
            (--context--)
+
+    (d.)The Body
+    Ex:
+    <body>
+        <p>What's up, doc?</p>
+    </body>
+    //Once the file has a body, many different types of content – including text, images, and buttons – can be added to the body.
+
+    (e.)HTML Structure
+        -HTML is organized as a collection of family tree relationships. 
+        Ex:
+        <body>
+            <p>This paragraph is a child of the body</p>
+        </body>
+
+        <!--the <p> element is nested inside the <body> element. The <p> element is considered a child of the <body> element, 
+           and the <body> element is considered the parent.；任何看的到的東西都要放在body裡面-->
+
+    (f.)Headings
+    Ex:
+    <body>
+        <h1>The Brown Bear</h1>
+        <h2>About Brown Bears</h2>
+        <h3>Species</h3>
+        <h3>Features</h3>
+        <h2>Habitat</h2>
+        <h3>Countries with Large Brown Bear Populations</h3>
+        <h3>Countries with Small Brown Bear Populations</h3>
+        <h2>Media</h2>
+            
+    </body>
+    <!--h1最大-->
+
+    (g.)Divs(division or a container that divides the page into sections.)
+    <!-- <div>s can contain any text or other HTML elements, such as links, images, or videos. 
+        Remember to always add two spaces of indentation when you nest elements inside of <div>s for better readability. -->
+    Ex:
+    <body>
+        <h1>The Brown Bear</h1>
+        <div>
+            <h2>About Brown Bears</h2>
+            <h3>Species</h3>
+            <h3>Features</h3>
+        </div>
+        <div>
+            <h2>Habitat</h2>
+            <h3>Countries with Large Brown Bear Populations</h3>
+            <h3>Countries with Small Brown Bear Populations</h3>
+        </div>
+        <div>
+            <h2>Media</h2>
+        </div>
+    </body>
+
+    <!-- SHIFT+TAB整段左移、TAB整段右移-->
+    (h.)Attributes
+        - Attributes are content added to the opening tag of an element and can be used in several different ways, from providing information to changing styling.
+        - 由兩種組成
+            - The name of the attribute
+            - The value of the attribute
+        Ex:
+        <div id="intro">
+            <h1>Introduction</h1>
+        </div>
+        <!-- 有點像是幫一個區塊取名子，給他ID -->
+
+    (i.)Displaying Text
+        - Paragraph(<p>) contain a block of plain text.
+        - <span> contains short pieces of text or other HTML.
+          They are used to separate small pieces of context that 
+          are on the same line as other context.
+        <!-- span 用在單句上面凸顯特定重點；div是用在整體分區 -->
+        Ex:
+        <div>
+            <h1>Technology</h1>
+        </div>
+        <div>
+            <p><span>Self-driving cars</span> are anticipated to replace up to 2 million jobs over the next two decades.</p>
+        </div>
     
+    (j.)Styling Text
+        - The <em> tag will generally render as italic emphasis. (斜體字)
+        - The <strong> will generally render as bold emphasis.
+    Ex:
+    <p><strong>The Nile River</strong> is the 
+    <em>longest</em> river in the world, measuring over
+    6,850 kilometers long (approximately 4,260 miles).</p>        
+
+    (k.)Line Breaks <br> (分行)
+        -The line break element is unique because it is only composed of a starting tag. 
+    Ex:
+    <p>The Nile River is the longest river <br> in the
+    world, measuring over 6,850 <br> kilometers long 
+    (approximately 4,260 <br> miles).</p>
+
+    (l.)Unordered Lists
+        - In addition to organizing text in paragraph form, you can also display content in an easy-to-read list.
+        - In HTML, you can use an unordered list tag (<ul>) to create a list of items in no particular order.
+        - Individual list items must be added to the unordered list using the <li> tag. The <li> or list item tag is used to describe an item in a list.
+    Ex:
+    <ul>
+        <li>Limes</li>
+        <li>Tortillas</li>
+        <li>Chicken</li>
+    </ul>
+    <!-- output會有一點一點條列式的效果 -->
+
+    (m.)Ordered Lists (<ol>)
+        - They are useful when you need to list different steps in a process or rank items for first to last.
+        - You can create the ordered list with the <ol> tag and then add individual list items to the list using <li> tags.
+    Ex:
+    <ol>
+        <li>Preheat the oven to 350 degrees.</li>
+        <li>Mix whole wheat flour, baking soda, and salt.</li>
+        <li>Cream the butter, sugar in separate bowl.</li>
+        <li>Add eggs and vanilla extract to bowl.</li>
+    </ol>
+    <!-- 結果會1、2、3、4條列出來 -->
+
+    (n.)Images
+        - The <img> tag allows you to add an image to a web page.
+        - Most elements require both opening and closing tags, but the <img> tag is a self-closing tag.
+        - Note that the end of the <img> tag has a forward slash /.
+        - The <img> tag has a required attribute called "src".
+        - The value of "src" must be the uniform resource locator (URL) of the image. 
+            - A URL is the web address or local address where a file is stored.
+    Ex:
+    <img src="image-location.jpg" />
+
+    (o.)Image Alts
+        - The alt attribute, which means alternative text, brings meaning to the images on our sites. 
+            - 有三個用處:
+                1.如果圖片故障，還能讓人了解圖片的大意
+                2.讓視障朋友也能了解圖片的意義
+                3.讓搜尋引擎可以搜尋
+
+    Ex:<img src="#" alt="A field of yellow sunflowers" />
+
+    (p.)Videos
+        -  the <video> element requires an opening and a closing tag.
+    Ex:
+    <video src="myVideo.mp4" width="320" height="240" controls>
+            Video not supported
+    </video>
+
+        - After the src attribute, the width and height attributes are used to set the size of the video displayed in the browser. 
+          The controls attribute instructs the browser to include basic video controls: pause, play and skip.
+        - The text, “Video not supported”, between the opening and closing video tags will only be displayed if the browser is unable
+          to load the video.
+
+
+2.HTML DOCUMENT STANDARDS
+(a.)Preparing for HTML
+    - You can let web browsers know that you are using HTML by starting your document with a document type declaration.
+    <!DOCTYPE html>
+    - This declaration is an instruction, and it must be the first line of code in your HTML document.
+    - It tells the browser what type of document to expect, along with what version of HTML is being used in the document.
+
+(b.)The <html> tag
+    -To create HTML structure and content, we must add opening and closing <html> tags after declaring <!DOCTYPE html>:
+        <!DOCTYPE html>
+        <html>
+
+        </html>
+    <!-- 在html中的程式碼才會被正確以html的規格來執行 -->
+
+(c.)The Head
